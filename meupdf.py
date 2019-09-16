@@ -29,3 +29,6 @@ class EnadeSpiderSpider(scrapy.Spider):
         self.logger.info("Saving PDF %s", path)
         with open(path, 'wb') as f:
             f.write(response.body)
+
+            
+# scrapy runspider meupdf.py
