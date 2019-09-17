@@ -1,4 +1,4 @@
-## Scrapy: baixando pdfs Enade
+## Scrapy: baixando PDFs Enade
 
 #pip install scrapy
 
