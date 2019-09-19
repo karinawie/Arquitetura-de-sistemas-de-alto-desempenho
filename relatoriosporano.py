@@ -10,7 +10,6 @@ class EnadeSpiderSpider(scrapy.Spider):
 
     def parse(self,response):
         base_url = 'http://inep.gov.br/web/guest/relatorios'
-        # as chaves incluem o xpath abaixo, ou seja os anos, na parte que for no link
         session_urls = response.xpath('//*[@class="filter__year"]/option/@value').extract()       
 
         for url in session_urls:
@@ -18,7 +17,6 @@ class EnadeSpiderSpider(scrapy.Spider):
             yield scrapy.Request(url=next_url, callback=self.get_pdf)
 
     def get_pdf(self, response):
-        #pdfs = response.xpath('//*[@data-nav="2010"]/div/a[@target="_blank"]/@href').extract()
         pdfs = response.xpath('//*[@data-nav="2006"]/div/ul/a[@target="_blank"]/@href').extract()
 
         for pdf in pdfs:
