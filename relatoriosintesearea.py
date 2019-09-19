@@ -30,4 +30,4 @@ class EnadeSpiderSpider(scrapy.Spider):
         with open(path, 'wb') as f:
             f.write(response.body)
            
-# scrapy runspider relatoriosinteseporano.py.py
+# scrapy runspider relatoriosintesearea.py
