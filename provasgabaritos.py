@@ -1,4 +1,5 @@
 #script com Scrapy para recolher PDFs. Fontes dos dados no INEP: Provas e gabaritos
+#este script baixa todos os PDFs de todos os anos 
 
 import scrapy
 from scrapy.selector import Selector
