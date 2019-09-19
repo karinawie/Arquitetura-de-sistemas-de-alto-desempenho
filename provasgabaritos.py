@@ -1,4 +1,4 @@
-#script com Scrapy para recolher PDFs. Fontes dos dados no INEP: Provas e gabaritos (http://inep.gov.br/web/guest/educacao-superior/enade/provas-e-gabaritos)
+#script com Scrapy para recolher PDFs. Fontes dos dados no INEP: Provas e gabaritos
 #este script baixa todos os PDFs de todos os anos 
 
 import scrapy
