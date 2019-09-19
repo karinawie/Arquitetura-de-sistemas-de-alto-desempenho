@@ -18,6 +18,7 @@ class EnadeSpiderSpider(scrapy.Spider):
 
     def get_pdf(self, response):
         pdfs = response.xpath('//*[@data-nav="2004"]/div/a[@target="_blank"]/@href').extract()
+        # pdfs = response.xpath('//*[@data-nav="2005"]/div/a[@target="_blank"]/@href').extract()
         # para trocar o ano, deve-se alterar o xpath  do data-nav
         for pdf in pdfs:
             print(pdf)
