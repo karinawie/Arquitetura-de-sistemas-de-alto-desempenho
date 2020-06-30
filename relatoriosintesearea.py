@@ -1,4 +1,4 @@
-#script com Scrapy para recolher PDFs. Fontes dos dados no INEP: Relatórios (http://inep.gov.br/web/guest/relatorios)
+#script com Scrapy para recolher PDFs. Fonte dos dados no INEP: Relatórios (http://inep.gov.br/web/guest/relatorios)
 #este script baixa todos os PDFs do ano de 2006
 
 import scrapy
