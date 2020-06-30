@@ -1,5 +1,5 @@
 #script com Scrapy para recolher PDFs. Fonte dos dados no INEP: Relatórios (http://inep.gov.br/web/guest/relatorios)
-#este script baixa todos os PDFs do ano de 2006
+#este script baixa todos os PDFs do ano de 2018
 
 import scrapy
 from scrapy.selector import Selector
@@ -17,7 +17,7 @@ class EnadeSpiderSpider(scrapy.Spider):
             yield scrapy.Request(url=next_url, callback=self.get_pdf)
 
     def get_pdf(self, response):
-        pdfs = response.xpath('//*[@data-nav="2006"]/div/ul/a[@target="_blank"]/@href').extract()
+        pdfs = response.xpath('//*[@data-nav="2018"]/div/ul/a[@target="_blank"]/@href').extract()
 
         for pdf in pdfs:
             print(pdf)
