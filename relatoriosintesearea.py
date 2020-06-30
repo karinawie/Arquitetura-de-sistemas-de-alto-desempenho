@@ -4,7 +4,7 @@
 import scrapy
 from scrapy.selector import Selector
 
-class EnadeSpiderSpider(scrapy.Spider):
+class EnadeSpider(scrapy.Spider):
     name = 'enade_spider'
     start_urls = ['http://inep.gov.br/web/guest/relatorios']
 
