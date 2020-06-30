@@ -10,15 +10,13 @@ class EnadeSpiderSpider(scrapy.Spider):
 
     def parse(self,response):
         base_url = 'http://inep.gov.br/web/guest/relatorios'
-        session_urls = response.xpath('//*[@class="filter__year"]/option/@value').extract()       
-
+        session_urls = response.xpath('//*[@class="filter__year"]/option/@value').extract()     
         for url in session_urls:
             next_url = base_url.format(url)
             yield scrapy.Request(url=next_url, callback=self.get_pdf)
 
     def get_pdf(self, response):
         pdfs = response.xpath('//*[@data-nav="2018"]/div/ul/a[@target="_blank"]/@href').extract()
-
         for pdf in pdfs:
             print(pdf)
             yield scrapy.Request(url=pdf, callback=self.save_pdf)
