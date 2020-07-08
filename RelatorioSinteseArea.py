@@ -1,5 +1,5 @@
-#script com Scrapy para recolher PDFs. Fonte dos dados no INEP: Relatórios (http://inep.gov.br/web/guest/relatorios)
-#este script baixa todos os PDFs do ano de 2018
+#Script com Scrapy para recolher PDFs. Fonte dos dados no INEP: Relatórios (http://inep.gov.br/web/guest/relatorios)
+#Este script baixa todos os PDFs dos Relatórios de Sítentese de Área do ano de 2018
 
 import scrapy
 from scrapy.selector import Selector
@@ -28,4 +28,4 @@ class EnadeSpider(scrapy.Spider):
         with open(path, 'wb') as f:
             f.write(response.body)
            
-# scrapy runspider relatoriosintesearea.py
+# scrapy runspider relatoriosintesearea.py (OBS: renomear arquivo)
