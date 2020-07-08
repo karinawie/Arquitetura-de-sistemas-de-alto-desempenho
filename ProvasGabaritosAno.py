@@ -1,11 +1,11 @@
 #script com Scrapy para recolher PDFs. Fonte dos dados no INEP: http://inep.gov.br/web/guest/educacao-superior/enade/provas-e-gabaritos
-#este script baixa todos os PDFs do ano de 2018
+#este script baixa todos os PDFs do ano de 2018.
 
 import scrapy
 from scrapy.selector import Selector
 
 class EnadeSpiderSpider(scrapy.Spider):
-    name = 'provagabaritoanos_spider'
+    name = 'provagabaritoano_spider'
     start_urls = ['http://inep.gov.br/web/guest/educacao-superior/enade/provas-e-gabaritos']
 
     def parse(self,response):
@@ -28,4 +28,4 @@ class EnadeSpiderSpider(scrapy.Spider):
         with open(path, 'wb') as f:
             f.write(response.body)  
 
-# scrapy runspider provasgabaritos2004.py
+# scrapy runspider provasgabaritos2018.py (OBS: renomear arquivo)
