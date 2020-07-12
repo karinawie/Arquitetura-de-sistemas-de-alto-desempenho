@@ -4,7 +4,7 @@
 import scrapy
 from scrapy.selector import Selector
 
-class EnadeSpiderSpider(scrapy.Spider):
+class ProvaGabaritoAno(scrapy.Spider):
     name = 'provagabaritoano_spider'
     start_urls = ['http://inep.gov.br/web/guest/educacao-superior/enade/provas-e-gabaritos']
 
